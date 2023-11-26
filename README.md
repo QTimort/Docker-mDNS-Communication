@@ -7,6 +7,6 @@ pip install -r requirements.txt
 ````
 
 ## Run with docker-compose
-```
+```sh
 docker-compose up --build
 ```

@@ -16,7 +16,8 @@ def register_mdns_service():
     desc = {'path': '/api'}
     info = ServiceInfo("_http._tcp.local.",
                        "My MDNS Service._http._tcp.local.",
-                       addresses=[socket.inet_aton("127.0.0.1")],
+                       # todo this should be an argument such as we can provide the IP through docker
+                       addresses=[socket.inet_aton("192.168.200.2")],
                        port=3000,
                        properties={})
     zeroconf = Zeroconf()
